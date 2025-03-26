@@ -1,0 +1,174 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Body styles */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: #121212; /* Dark background */
+    color: #e0e0e0; /* Light gray text */
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    height: 100vh;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Container for weather info */
+.weather-container {
+    max-width: 480px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 24px;
+    background-color: #1e1e1e; /* Darker container */
+    border-radius: 20px; /* Rounded corners */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Darker shadow */
+    backdrop-filter: blur(15px);
+    overflow: hidden;
+}
+
+/* Title of the weather section */
+.weather-title {
+    text-align: center;
+    color: #f9f9f9; /* Light text */
+    font-size: 28px; /* Larger font for a modern look */
+    font-weight: 600;
+    margin-bottom: 24px;
+}
+
+/* Input field for API key */
+.api-key-input {
+    width: 100%;
+    padding: 16px;
+    margin-bottom: 16px;
+    border: 1px solid #555; /* Darker border */
+    border-radius: 12px; 
+    font-size: 16px;
+    color: #e0e0e0; /* Light text */
+    background-color: #333; /* Dark background */
+    outline: none;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+.api-key-input:focus {
+    border-color: #ef4444; /* Red accent on focus */
+    box-shadow: 0 0 5px rgba(239, 68, 68, 0.6); /* Focus ring with red */
+}
+
+/* Select container (for cities, etc.) */
+.select-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+/* Select input styles */
+.select-input {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #555;
+    border-radius: 12px;
+    font-size: 16px;
+    background-color: #333; /* Dark background */
+    transition: all 0.3s ease;
+}
+
+.select-input:disabled {
+    background-color: #444;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+.select-input:focus {
+    border-color: #ef4444; /* Red accent on focus */
+    box-shadow: 0 0 5px rgba(239, 68, 68, 0.6);
+}
+
+/* Weather button */
+.weather-button {
+    width: 100%;
+    padding: 16px;
+    background-color: #ef4444; /* Red background */
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.weather-button:hover {
+    background-color: #d32f2f; /* Darker red when hovered */
+}
+
+.weather-button:disabled {
+    background-color: #555;
+    cursor: not-allowed;
+}
+
+/* Error message styling */
+.error-message {
+    color: #dc2626;
+    background-color: #fee2e2;
+    text-align: center;
+    padding: 16px;
+    border-radius: 12px;
+    margin-top: 16px;
+}
+
+/* Weather result container */
+.weather-result {
+    background-color: #1e1e1e; /* Dark background for results */
+    border-radius: 20px;
+    padding: 24px;
+    margin-top: 24px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Weather location styling */
+.weather-location {
+    font-size: 22px;
+    font-weight: 600;
+    color: #f9f9f9;
+    margin-bottom: 16px;
+}
+
+/* Weather details styling */
+.weather-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.weather-details p {
+    color: #b3b3b3; /* Slightly dimmed text */
+    margin: 0;
+}
+
+/* iOS-like Card Components */
+.weather-card {
+    background-color: #2a2a2a; /* Darker card background */
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    margin-top: 16px;
+}
+
+.weather-card-header {
+    font-size: 20px;
+    font-weight: 600;
+    color: #f9f9f9; /* Light header text */
+    margin-bottom: 12px;
+}
+
+.weather-card-body {
+    font-size: 16px;
+    color: #b3b3b3; /* Dimmed body text */
+}
